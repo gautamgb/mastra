@@ -336,8 +336,7 @@ export abstract class MastraServer<TApp, TRequest, TResponse> extends MastraServ
   protected customApiRoutes?: ApiRoute[];
   protected mcpOptions?: MCPOptions;
   private customRouteHandler:
-    | ((request: Request, env?: { requestContext?: RequestContext }) => Promise<Response>)
-    | null = null;
+    ((request: Request, env?: { requestContext?: RequestContext }) => Promise<Response>) | null = null;
 
   constructor({
     app,

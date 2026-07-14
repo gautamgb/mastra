@@ -6,8 +6,7 @@ export type EqualityFilter = {
 };
 
 export type IndexHint =
-  | { index: 'by_workflow'; workflowName: string }
-  | { index: 'by_workflow_run'; workflowName: string; runId: string };
+  { index: 'by_workflow'; workflowName: string } | { index: 'by_workflow_run'; workflowName: string; runId: string };
 
 export type StorageRequest =
   | {

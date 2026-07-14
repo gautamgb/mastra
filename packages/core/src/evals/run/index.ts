@@ -169,8 +169,7 @@ export async function runEvals(config: {
   target: Agent | Workflow;
   gates?: MastraScorer<any, any, any, any>[];
   targetOptions?:
-    | Omit<AgentExecutionOptions<any>, 'scorers' | 'returnScorerData' | 'requestContext'>
-    | WorkflowRunOptions;
+    Omit<AgentExecutionOptions<any>, 'scorers' | 'returnScorerData' | 'requestContext'> | WorkflowRunOptions;
   onItemComplete?: (params: {
     item: RunEvalsDataItem<any>;
     targetResult: any;
@@ -491,8 +490,7 @@ async function executeTarget(
   target: Agent | Workflow,
   item: RunEvalsDataItem<any>,
   targetOptions?:
-    | Omit<AgentExecutionOptions<any>, 'scorers' | 'returnScorerData' | 'requestContext'>
-    | WorkflowRunOptions,
+    Omit<AgentExecutionOptions<any>, 'scorers' | 'returnScorerData' | 'requestContext'> | WorkflowRunOptions,
 ) {
   try {
     if (isWorkflow(target)) {

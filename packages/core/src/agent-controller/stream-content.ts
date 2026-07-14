@@ -78,8 +78,7 @@ export function toSystemReminderContent(
           : undefined,
     judgeModelId: getStringValue(payload.judgeModelId) ?? getStringValue(metadata?.judgeModelId),
     goalEvaluation: getRecordValue(metadata?.goalEvaluation) as
-      | Extract<AgentControllerMessageContent, { type: 'system_reminder' }>['goalEvaluation']
-      | undefined,
+      Extract<AgentControllerMessageContent, { type: 'system_reminder' }>['goalEvaluation'] | undefined,
   };
 }
 

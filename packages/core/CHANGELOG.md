@@ -731,9 +731,7 @@
       memory: { messages: { maxAge: '30d' }, threads: { maxAge: '90d' } },
       observability: { spans: { maxAge: '7d' } },
     },
-    domains: {
-      /* ... */
-    },
+    domains: {/* ... */},
   });
 
   // Wire this to your own cron — Mastra never runs it for you.
@@ -1362,9 +1360,7 @@
       memory: { messages: { maxAge: '30d' }, threads: { maxAge: '90d' } },
       observability: { spans: { maxAge: '7d' } },
     },
-    domains: {
-      /* ... */
-    },
+    domains: {/* ... */},
   });
 
   // Wire this to your own cron — Mastra never runs it for you.
@@ -17996,9 +17992,7 @@ Bearer <token>` header. The token comes from the new
   ```ts
   import { Mastra } from '@mastra/core';
 
-  const mastra = new Mastra({
-    /* ... */
-  });
+  const mastra = new Mastra({/* ... */});
 
   const dataset = await mastra.datasets.create({ name: 'my-eval-set' });
   await dataset.addItems([{ input: { query: 'What is 2+2?' }, groundTruth: { answer: '4' } }]);
@@ -18227,9 +18221,7 @@ Bearer <token>` header. The token comes from the new
   ```ts
   import { Mastra } from '@mastra/core';
 
-  const mastra = new Mastra({
-    /* ... */
-  });
+  const mastra = new Mastra({/* ... */});
 
   const dataset = await mastra.datasets.create({ name: 'my-eval-set' });
   await dataset.addItems([{ input: { query: 'What is 2+2?' }, groundTruth: { answer: '4' } }]);
@@ -19194,9 +19186,7 @@ Bearer <token>` header. The token comes from the new
   const agent = new Agent({
     name: 'my-agent',
     inputProcessors: [toolSearch],
-    tools: {
-      /* always-available tools */
-    },
+    tools: {/* always-available tools */},
   });
   ```
 
@@ -19426,9 +19416,7 @@ Bearer <token>` header. The token comes from the new
   const agent = new Agent({
     name: 'my-agent',
     inputProcessors: [toolSearch],
-    tools: {
-      /* always-available tools */
-    },
+    tools: {/* always-available tools */},
   });
   ```
 

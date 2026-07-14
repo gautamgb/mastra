@@ -114,8 +114,7 @@ describe('AIMock loop scenario: evented + UnixSocketPubSub', () => {
     // for the wire, but the loop must have observed the original structure).
     const turn2Messages = requests[1]?.body?.messages ?? [];
     const toolMessage = turn2Messages.find(message => (message as { role?: string }).role === 'tool') as
-      | { tool_call_id?: string; content?: string }
-      | undefined;
+      { tool_call_id?: string; content?: string } | undefined;
     expect(toolMessage?.tool_call_id).toBe('call_lookup_alpha');
     expect(toolMessage?.content).toContain('STATUS_OK:alpha');
   });
