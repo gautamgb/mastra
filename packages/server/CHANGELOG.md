@@ -1,5 +1,25 @@
 # @mastra/server
 
+## 1.52.0-alpha.2
+
+### Patch Changes
+
+- Fixed agent generate and stream requests being rejected with a 400 error when `memory.resource` was omitted but server auth was configured with `mapUserToResourceId`. The request body schema required `memory.resource` even though the server derives the resource ID from the authenticated user and overrides any client-provided value. ([#19524](https://github.com/mastra-ai/mastra/pull/19524))
+
+  Clients no longer need to send a placeholder resource ID:
+
+  ```json
+  {
+    "messages": ["what was my last message?"],
+    "memory": { "thread": "test-thread" }
+  }
+  ```
+
+  If a request uses memory and neither the body nor the authenticated request context provides a resource ID, the server now returns a clear 400 error. Fixes [#19518](https://github.com/mastra-ai/mastra/issues/19518).
+
+- Updated dependencies [[`74faf8b`](https://github.com/mastra-ai/mastra/commit/74faf8bd9c1018f2492653c06b1e25fc8300e9e6), [`1fadac4`](https://github.com/mastra-ai/mastra/commit/1fadac44537caeefe81f9f775ae2f2f3d94e9069), [`792ec9a`](https://github.com/mastra-ai/mastra/commit/792ec9a0869bab8274cf5e0ed2840738737a1607), [`c0bec73`](https://github.com/mastra-ai/mastra/commit/c0bec732c93d1a22ae5e51ed66cf8cacca8bd6a6)]:
+  - @mastra/core@1.52.0-alpha.2
+
 ## 1.51.1-alpha.1
 
 ### Patch Changes

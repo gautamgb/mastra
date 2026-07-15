@@ -1,5 +1,13 @@
 # @mastra/deployer-vercel
 
+## 1.2.8-alpha.1
+
+### Patch Changes
+
+- Updated dependencies [[`74faf8b`](https://github.com/mastra-ai/mastra/commit/74faf8bd9c1018f2492653c06b1e25fc8300e9e6), [`1fadac4`](https://github.com/mastra-ai/mastra/commit/1fadac44537caeefe81f9f775ae2f2f3d94e9069), [`792ec9a`](https://github.com/mastra-ai/mastra/commit/792ec9a0869bab8274cf5e0ed2840738737a1607), [`c0bec73`](https://github.com/mastra-ai/mastra/commit/c0bec732c93d1a22ae5e51ed66cf8cacca8bd6a6)]:
+  - @mastra/core@1.52.0-alpha.2
+  - @mastra/deployer@1.52.0-alpha.2
+
 ## 1.2.8-alpha.0
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # mastracode
 
+## 0.31.1-alpha.2
+
+### Patch Changes
+
+- Fixed a stuck ask_user question box after the underlying run failed: the prompt is now dismissed automatically instead of accepting an answer that could never be delivered. ([#19444](https://github.com/mastra-ai/mastra/pull/19444))
+
+- Updated dependencies [[`74faf8b`](https://github.com/mastra-ai/mastra/commit/74faf8bd9c1018f2492653c06b1e25fc8300e9e6), [`1fadac4`](https://github.com/mastra-ai/mastra/commit/1fadac44537caeefe81f9f775ae2f2f3d94e9069), [`792ec9a`](https://github.com/mastra-ai/mastra/commit/792ec9a0869bab8274cf5e0ed2840738737a1607), [`c0bec73`](https://github.com/mastra-ai/mastra/commit/c0bec732c93d1a22ae5e51ed66cf8cacca8bd6a6)]:
+  - @mastra/core@1.52.0-alpha.2
+  - @mastra/code-sdk@0.1.1-alpha.2
+
 ## 0.31.1-alpha.1
 
 ### Patch Changes
